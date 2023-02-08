@@ -10,6 +10,7 @@ student_db = TinyDB(db_file_path)
 
 
 def add(student=None):
+    test = "newTest"
     queries = []
     query = Query()
     queries.append(query.first_name == student.first_name)
