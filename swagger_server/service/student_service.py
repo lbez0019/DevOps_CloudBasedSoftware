@@ -46,7 +46,7 @@ def get_by_id(student_id=None, subject=None):
     return student
 
 def delete(student_id=None):
-    student = collection.find({"student_id": int(student_id)})
+    student = collection.find_one({"student_id": int(student_id)})
     if not student:
         return 'not found', 404
     #student_db.remove(doc_ids=[int(student_id)])
